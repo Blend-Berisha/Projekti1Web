@@ -64,11 +64,15 @@ a {
     border-radius: 20px;
 }
 #kontenti h2{
-    color: red;
+    background-color: red;
     margin-top: 5px;
+    color: white;
+    padding: 10px;
+
 }
 
 #kontenti1 {
+    
     margin-top: 5px;
     display: flex ;
     flex-direction: column;
@@ -88,6 +92,50 @@ a {
     border-radius: 20px;
 }
 #kontenti1 h2{
-    color: red;
+    background-color: red;
+    color:white;
     margin-top: 30px;
+    padding: 10px;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 50px;
+}
+
+.footer-links, .social-media, .contact-info {
+    text-align: left;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.img-socialmedia{
+    margin-top: 8px;
+    width: 60px;
+    height: 60px;
+
+}
+
+
+footer {
+    margin-top: 10px;
+    background-color: #222;
+    color: #fff;
+    padding: 30px 0;
+}
+
+
+.footer-bottom {
+    margin-top: 10px;
+    background-color: #111;
+    padding: 20px 0;
+    text-align: center;
 }

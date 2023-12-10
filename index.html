@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            background: url(3840x2160-bad-news-eagles-csgo-team-wallpaper-desktop-and-v0-uyfdhaxtehva1.png);
         }
 
         .navigation {
@@ -73,21 +74,55 @@
         background-color: #f5f5f5;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-
-#txt1 {
-  color: #333;
-  font-weight: bold;
-}
-
-            
-            
         
 
-        #img1{
-            width: 600px;
-            height: 500px;
-        }
+#txt1 {
+  color: antiquewhite;
+  font-weight: bold;
+  font-size: 30px;
+}
+ 
 
+        #slideshow{
+            width: 600px;
+            height: 450px;
+        }
+        footer {
+    background-color: #222;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 50px;
+}
+
+.footer-links, .social-media, .contact-info {
+    text-align: left;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+
+
+
+.footer-bottom {
+    margin-top: 10px;
+    background-color: #111;
+    padding: 20px 0;
+    text-align: center;
+}
       
     </style>
 </head>
@@ -100,8 +135,8 @@
                 <h3><a href="#">Bad News Eagles</a></h3>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Lojtaret</a></li>
-                <li><a href="#">Shop</a></li>
+                <li><a href="Lojtaret.html">Lojtaret</a></li>
+                <li><a href="shop.html">Shop</a></li>
                 <li><a href="# ">Log-in</a></li>
             </ul>
         </nav>
@@ -110,10 +145,59 @@
     <main>
         <div class="container">
             <div class="item" id="txt1">Bad News Eagles jane ekipi i par shqiptar qe kan arritur ne turnirin me te madh ne bot ne turnirin major ku jan kualifikuar 3 her radhazi deri me tani
-                ku kualifikimet e radhes per ket turnir jane ne dhjetor 2023. </div>
-            <div class="item"><img id="img1" src="https://mir-s3-cdn-cf.behance.net/projects/404/ac42f7142981801.Y3JvcCwzMDAwLDIzNDYsMCw2NDY.jpg" alt=""></div>
+                ku kualifikimet e radhes per ket turnir jane ne dhjetor 2023.Tani Bad News Eagles kane nenshkrar me nje oranizate me qender ne Londer te Anglis ku tani ekipi njihet me e emrin e ri "Guild Eagles" </div>
+            <div class="item"><img id="slideshow" /></div>
         </div>
     </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <h2>Sponsors</h2>
+                <ul>
+                    <li><a href="#">Hellcase</a></li>
+                    <li><a href="">MadTech</a></li>
+                    <li><a href="#">Hummels</a></li>
+                    <li><a href="#">Gjirafa</a></li>
+                    <li><a href="#">Sky Broadband</a></li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <h2>Social Media</h2>
+                <ul>
+                    <li><a href="https://www.facebook.com/BadNewsEagles"><img src="https://www.unipile.com/wp-content/uploads/2022/06/logo-facebook-noir.png" alt=""></a></li>
+                    <li><a href="https://twitter.com/_badnewseagles"><img src="https://seeklogo.com/images/T/twitter-icon-circle-black-logo-35827D553B-seeklogo.com.png" alt=""></a></li>
+                   
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h2>Contact Info</h2>
+                <ul>
+                    <li>Email: info@badnews.com</li>
+                    <li>Phone: +383 43 730 558</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2022 Bad News Eagles. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        let i = 0;
+        let imgArray = ['bnePlayer.webp','photo2.jpg','photo3.jpg','photo4.jpg'];
+
+        function changeImg(){
+            document.getElementById('slideshow').src = imgArray[i];
+
+            if(i< imgArray.length -1){
+                i++;
+            }
+            else{
+                i=0;
+            }
+            setTimeout("changeImg()", 2900);
+        }
+        document.addEventListener(onload, changeImg());
+    </script>
 </body>
 
 </html>

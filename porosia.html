@@ -1,10 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="Register.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Form</title>
+  <style>
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navigation {
+            display: flex;
+            width: 100%;
+            height: 80px;
+            border: solid 1px black;
+            justify-content: space-around;
+            background-color: black;
+        }
+
+        .navigation ul {
+            display: flex;
+            gap: 40px;
+        }
+
+        .navigation ul,
+        li,
+        a {
+            color: white;
+            text-decoration: none;
+            list-style: none;
+            text-transform: uppercase;
+            font-size: 16px;
+            transition: ease-in-out 1ms;
+            margin-top: 13px;
+
+        }
+
+        img {
+            margin-top: 8px;
+            width: 60px;
+            height: 60px;
+
+        }
+        
+        h3{
+            color: white;
+            margin-top: 25px;
+        }
+
+        .navigation ul,
+        li,
+        a:hover {
+            color: red;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+        }
+
+        
+    .text1{
+        text-align: center;
+        background-color: #222;
+        color: #fff;
+        padding: 12px;
+        margin-bottom: 10px;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+    footer {
+    background-color: #222;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 50px;
+}
+
+.footer-links, .social-media, .contact-info {
+    text-align: left;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+
+
+
+.footer-bottom {
+    margin-top: 10px;
+    background-color: #111;
+    padding: 20px 0;
+    text-align: center;
+}
+  </style>
 </head>
 <body>
     <header>
@@ -16,65 +151,76 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Lojtaret.html">Lojtaret</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="LogIn.html">Log-In</a></li>
+                <li><a href="LogIn.html">Log-in</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <h3 class="text1">Sheno posht te dhenat e juaja sipas kerkesave te me poshtme</h3>
 
-        <img src="3840x2160-bad-news-eagles-csgo-team-wallpaper-desktop-and-v0-uyfdhaxtehva1.png" class="img1">
-    
-        <form id="registrationForm" onsubmit="return validateForm()">
+  <form id="orderForm">
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName" required>
 
-            <h2>Register</h2>
-    
-            <input type="text" id="emri" name="emri" required placeholder="Emri">
-        
-            
-            <input type="email" id="email" name="email" required placeholder="Email">
-        
-            
-            <input type="password" id="password" name="password" required placeholder="Password">
+    <label for="postalCode">Postal Code:</label>
+    <input type="text" id="postalCode" name="postalCode" required>
 
-            <a href="Lojtaret.html">
-              <button type="submit">Register</button>
-            </a>
-            
-          </form>
-          
+    <label for="mobileNumber">Mobile Number:</label>
+    <input type="tel" id="mobileNumber" name="mobileNumber" required>
 
-     </main>
-        <script>
-             function validateForm() {
-      var emri = document.getElementById('emri').value;
-      var email = document.getElementById('email').value;
-      var password = document.getElementById('password').value;
+    <label for="Adress">Adress:</label>
+    <input type="text" id="Adress" name="Adress" required>
+
+    <label for="Email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <button type="button" onclick="submitForm()">Submit Order</button>
+  </form>
+
+  <footer>
+    <div class="footer-container">
+        <div class="footer-links">
+            <h2>Sponsors</h2>
+            <ul>
+                <li><a href="#">Hellcase</a></li>
+                <li><a href="">MadTech</a></li>
+                <li><a href="#">Hummels</a></li>
+                <li><a href="#">Gjirafa</a></li>
+                <li><a href="#">Sky Broadband</a></li>
+            </ul>
+        </div>
+        <div class="social-media">
+            <h2>Social Media</h2>
+            <ul>
+                <li><a href="https://www.facebook.com/BadNewsEagles"><img src="https://www.unipile.com/wp-content/uploads/2022/06/logo-facebook-noir.png" alt=""></a></li>
+                <li><a href="https://twitter.com/_badnewseagles"><img src="https://seeklogo.com/images/T/twitter-icon-circle-black-logo-35827D553B-seeklogo.com.png" alt=""></a></li>
+               
+            </ul>
+        </div>
+        <div class="contact-info">
+            <h2>Contact Info</h2>
+            <ul>
+                <li>Email: info@badnews.com</li>
+                <li>Phone: +383 43 730 558</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2022 Bad News Eagles. All rights reserved.</p>
+    </div>
+</footer>
+
+  <script>
+    function submitForm() {
+      var fullName = document.getElementById("fullName").value;
+      var postalCode = document.getElementById("postalCode").value;
+      var mobileNumber = document.getElementById("mobileNumber").value;
+      var Adress=document.getElementById("Adress").value;
+      var email=document.getElementById("email").value;
+
       
-      var emriRegex = /^[a-zA-Z\s]+$/;
-      if (!emriRegex.test(emri)) {
-        alert('Shtyp Nje Emer Te Vleshem.');
-        return false;
-      }
-
-      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        alert('Ju Lutem Shenoni Nje Email Te Vleshem.');
-        return false;
-      }
-
-      
-      if (password.length < 4) {
-        alert('Password-i duhet te jet me i gjat.');
-        return false;
-      }
-      
-      window.alert("Jeni regjistruar");
-      
-      return true;
+      alert("Thank You for your order!\nOrder is in process now\n\nFull Name: " + fullName + "\nPostal Code: " + postalCode + "\nMobile Number: " + mobileNumber +"\nAdress: "+ Adress +"\nEmail: "+email);
     }
-
   </script>
-     </script>
-    
+
 </body>
-<html>
+</html>
